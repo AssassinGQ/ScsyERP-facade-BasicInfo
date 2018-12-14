@@ -4,6 +4,7 @@ import cn.AssassinG.ScsyERP.common.annitations.Valid;
 import cn.AssassinG.ScsyERP.common.entity.UnLoginableEntity;
 
 import javax.persistence.Entity;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -25,6 +26,7 @@ public class Project extends UnLoginableEntity {
 
     public Project() {
         super();
+        this.Materials = new HashSet<>();
     }
 
     public String getProjectNumber() {
@@ -72,7 +74,10 @@ public class Project extends UnLoginableEntity {
     }
 
     public void setMaterials(Set<Long> materials) {
-        Materials = materials;
+        if(materials == null)
+            this.Materials = new HashSet<>();
+        else
+            Materials = materials;
     }
 
     @Override
