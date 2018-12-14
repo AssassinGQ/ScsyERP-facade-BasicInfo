@@ -4,6 +4,7 @@ import cn.AssassinG.ScsyERP.common.annitations.Valid;
 import cn.AssassinG.ScsyERP.common.entity.UnLoginableEntity;
 
 import javax.persistence.Entity;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -18,6 +19,8 @@ public class Warehouse extends UnLoginableEntity {
 
     public Warehouse() {
         super();
+        this.LiftWorkers = new HashSet<>();
+        this.DriveWorkers = new HashSet<>();
     }
 
     public String getAddress() {
@@ -41,7 +44,10 @@ public class Warehouse extends UnLoginableEntity {
     }
 
     public void setLiftWorkers(Set<Long> liftWorkers) {
-        LiftWorkers = liftWorkers;
+        if(this.LiftWorkers == null)
+            this.LiftWorkers = new HashSet<>();
+        else
+            LiftWorkers = liftWorkers;
     }
 
     public Set<Long> getDriveWorkers() {
@@ -49,7 +55,10 @@ public class Warehouse extends UnLoginableEntity {
     }
 
     public void setDriveWorkers(Set<Long> driveWorkers) {
-        DriveWorkers = driveWorkers;
+        if(driveWorkers == null)
+            this.DriveWorkers = new HashSet<>();
+        else
+            DriveWorkers = driveWorkers;
     }
 
     @Override
