@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum ProductStatus {
-    YRK("已入库", 0), DCK("待出库", 1), YCK("已出库", 2), YWC("已完成", 3);
+    DRK("待入库", 0),YRK("已入库", 1), DCK("待出库", 2), YCK("已出库", 3), YWC("已完成", 4);
     private String Name;
     private Integer Value;
 

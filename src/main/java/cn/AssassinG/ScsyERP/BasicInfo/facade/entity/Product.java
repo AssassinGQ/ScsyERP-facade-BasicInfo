@@ -42,7 +42,7 @@ public class Product extends UnLoginableEntity {
 
     public Product() {
         super();
-        this.Status = ProductStatus.YRK;
+        this.Status = ProductStatus.DRK;
     }
 
     public Long getProject() {
