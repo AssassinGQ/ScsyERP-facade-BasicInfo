@@ -2,6 +2,7 @@ package cn.AssassinG.ScsyERP.BasicInfo.facade.entity;
 
 import cn.AssassinG.ScsyERP.common.annitations.Valid;
 import cn.AssassinG.ScsyERP.common.entity.UnLoginableEntity;
+import cn.AssassinG.ScsyERP.common.utils.StringUtils;
 
 import javax.persistence.Entity;
 import java.util.HashSet;
@@ -27,6 +28,7 @@ public class Project extends UnLoginableEntity {
     public Project() {
         super();
         this.Materials = new HashSet<>();
+        this.ProjectNumber = StringUtils.getRandomStr(10, StringUtils.StrType.NUMBER);
     }
 
     public String getProjectNumber() {
