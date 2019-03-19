@@ -72,7 +72,7 @@ public class Product extends UnLoginableEntity {
     }
 
     @JSONField(name = "status")
-    public String getStatusName(){
+    public String getStatusValue(){
         if(Status != null)
             return this.Status.getName();
         else
@@ -80,8 +80,8 @@ public class Product extends UnLoginableEntity {
     }
 
     @JSONField(name = "status")
-    public void setStatusName(String name){
-        this.Status = ProductStatus.getEnum(name);
+    public void setStatusValue(int value){
+        this.Status = ProductStatus.getEnum(value);
     }
 
     public String getPacketNumber() {
@@ -143,8 +143,8 @@ public class Product extends UnLoginableEntity {
     }
 
     @JSONField(name = "packetType")
-    public void setPacketTypeName(String name){
-        this.PacketType = cn.AssassinG.ScsyERP.BasicInfo.facade.enums.PacketType.getEnum(name);
+    public void setPacketTypeValue(int value){
+        this.PacketType = cn.AssassinG.ScsyERP.BasicInfo.facade.enums.PacketType.getEnum(value);
     }
 
     public Double getWidth() {
