@@ -19,7 +19,7 @@ public class Product extends UnLoginableEntity {
     private ProductStatus Status;
     @Valid(varType = Valid.VarType.String, maxLength = 30)
     private String PacketNumber;
-    @Valid(varType = Valid.VarType.Number, minLength = 20, maxLength = 20)
+    @Valid(nullAble = true, varType = Valid.VarType.Number, minLength = 20, maxLength = 20)
     private Long Warehouse;
     @Valid(varType = Valid.VarType.String, nullAble = true, maxLength = 30)
     private String WarehouseLocation;
