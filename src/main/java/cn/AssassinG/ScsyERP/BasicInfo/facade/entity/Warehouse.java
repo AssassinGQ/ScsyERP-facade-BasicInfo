@@ -19,6 +19,7 @@ public class Warehouse extends UnLoginableEntity {
 
     public Warehouse() {
         super();
+        //todo 去掉次两行，并在biz中初始化这两个字段
         this.LiftWorkers = new HashSet<>();
         this.DriveWorkers = new HashSet<>();
     }

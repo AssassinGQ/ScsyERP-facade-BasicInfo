@@ -26,6 +26,7 @@ public class Project extends UnLoginableEntity {
 
     public Project() {
         super();
+        //todo 去掉，并且在biz中初始化此字段
         this.Materials = new HashSet<>();
     }
 
